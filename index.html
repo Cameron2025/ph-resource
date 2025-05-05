@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-them="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH-Tube</title>
+    <link rel="stylesheet" href="scripts/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <header>
+        <nav class="w-11/12 mx-auto py-3 flex justify-between items-center border-b">
+            <div class="logo w-[100px]">
+                <img src="ASSERT/Logo.png" alt="">
+            </div>
+            <div class="search">
+                <label class="input">
+                    <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <g
+                        stroke-linejoin="round"
+                        stroke-linecap="round"
+                        stroke-width="2.5"
+                        fill="none"
+                        stroke="currentColor"
+                      >
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.3-4.3"></path>
+                      </g>
+                    </svg>
+                    <input id="search-input" type="search" class="grow" placeholder="Search" />
+                    <kbd class="kbd kbd-sm">⌘</kbd>
+                    <kbd class="kbd kbd-sm">K</kbd>
+                  </label>
+            </div>
+            <div class="sort">
+                <button class="btn">Sort</button>
+            </div>
+        </nav>
+    </header>
+    <nav id="categoris" class="py-3 flex gap-5 justify-center"></nav>
+    <main>
+        <section id="videos" class="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-3 gap-2"></section>
+    </main>
+
+    <!-- You can open the modal using ID.showModal() method -->
+<button id="showModalData" class="btn" onclick="customModal.showModal()">open modal</button>
+<dialog id="customModal" class="modal">
+  <div class="modal-box w-11/12 max-w-5xl">
+    <div id="modal-content">
+
+    </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+    <script src="scripts/video.js"></script>
+</body>
+</html>
